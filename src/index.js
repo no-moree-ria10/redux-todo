@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-
+import {addTodo} from'./actions'
 import todo from './reducers'
 
 import App from './components/App';
@@ -16,3 +16,6 @@ render(
         </Provider>,
     document.getElementById('root')
 );
+
+store.dispatch(addTodo('Hello World'))
+console.log(store.getState())
