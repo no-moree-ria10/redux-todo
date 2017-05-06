@@ -16,3 +16,6 @@ render(
         </Provider>,
     document.getElementById('root')
 );
+
+store.dispatch(addTodo('Hello React!'))
+store.dispatch(addTodo('HelloRedux!'))
